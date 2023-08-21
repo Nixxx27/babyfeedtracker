@@ -18,7 +18,7 @@ class BabyLogsController extends Controller
 
         $all_feeds =  DrinkLog::where('baby_code',$baby_code)->orderBy('id','desc')->limit(5)->get();
         $last_feed =  DrinkLog::where('baby_code',$baby_code)->orderBy('id','desc')->first();
-        $baby_info = Baby::where('baby_code',$baby_code)->orderBy('id','desc')->first();
+        $baby_info = Baby::where('baby_code',$baby_code)->first();
 
         $baby_config = BabyConfig::where('baby_code',$baby_code)->first();
 
@@ -50,28 +50,6 @@ class BabyLogsController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
