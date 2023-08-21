@@ -14,10 +14,11 @@
       padding: 30px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .app-by{
+    .app-by > a{
         font-size: 12px;
         font-style: italic;
-        color: #555;
+        color: #555 !important;
+        text-decoration: none;
     }
     .feed-button {
       padding: 10px 20px;
@@ -45,7 +46,8 @@
 
     <img src="{{asset('assets/images/milk.png')}}" style="width:15%;height: auto" alt="">
 <h3>Baby MilkFeedTracker      </h3>
-<span class="app-by">By: NikkoZabala</span>
+<span class="app-by">
+    <a href="https://www.nikkozabala.com/" title="Nikkozabala.com">By: NikkoZabala</a></span>
 @include('notifications.success')
 @include('notifications.error')
 
